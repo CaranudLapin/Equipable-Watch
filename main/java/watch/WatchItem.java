@@ -1,5 +1,6 @@
 package watch;
 
+import necesse.engine.GameLog;
 import necesse.engine.localization.Localization;
 import necesse.engine.util.GameBlackboard;
 import necesse.entity.mobs.PlayerMob;
@@ -16,7 +17,7 @@ public class WatchItem extends SimpleTrinketItem {
         ListGameTooltips tooltips = new ListGameTooltips();
         tooltips.add(Localization.translate("itemtooltip", this.isAbilityTrinket(item) ? "trinketabilityslot" : "trinketslot"));
         tooltips.add(Localization.translate("itemtooltip", "watchbuff1"));
-        if (Watch.settings.milttime) {
+        if (Watch.settingsGetter.getSelection("timeFormat").toString().equalsIgnoreCase("24")) {
             tooltips.add(Localization.translate("itemtooltip", "watchbuff2", "time", perspective.getWorldEntity().getDayTimeReadable()));
         } else {
             if (perspective.getWorldEntity().getDayTimeHour() == 0) {

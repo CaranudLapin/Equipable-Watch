@@ -8,3 +8,8 @@ watchbuff=Current time
 watchbuff1=Displays the current time
 watchbuff2=Current time: <time>
 watchbuff3=Current Time
+
+[settingsui]
+timeFormat=Time Format
+12hr=12-hours
+24hr=24-hours

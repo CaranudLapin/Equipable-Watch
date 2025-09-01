@@ -53,7 +53,7 @@ public class WatchBuff extends TrinketBuff {
 
     public String getTime(PlayerMob perspective) {
         String out = "wack2";
-        if (Watch.settings.milttime) {
+        if (Watch.settingsGetter.getSelection("timeFormat").toString().equalsIgnoreCase("24")) {
             out = perspective.getWorldEntity().getDayTimeReadable();
         } else {
             if (perspective.getWorldEntity().getDayTimeHour() == 0) {
